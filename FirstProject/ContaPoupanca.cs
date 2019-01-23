@@ -3,7 +3,7 @@ namespace FirstProject
 {
 
     
-    public class ContaPoupanca : Conta
+    public class ContaPoupanca : Conta, ITributavel
     {
         public const double tAXA_SAQUE = 0.0;
 
@@ -19,10 +19,15 @@ namespace FirstProject
             return TAXA_SAQUE;
         }
 
+        public double calculaTributo()
+        {
+            return this.Saldo * 0.02;
+        }
+
         public override void deposito(double valor)
         {
             if(valor > 0)
-            base.deposito(valor);
+            this.Saldo += valor;
             else
             System.Console.WriteLine("Deposito de valor invalido!");
         }
@@ -30,8 +35,8 @@ namespace FirstProject
         public override void saque(double valor)
         {
             if(valor <= this.Saldo)
-            base.saque(valor);
-            //this.Saldo -= valor;
+            this.Saldo -= valor;
+            
             else
             System.Console.WriteLine("Saldo insuficiente!");
 

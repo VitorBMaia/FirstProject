@@ -51,5 +51,14 @@ namespace FirstProject.Test
             var conta = new ContaPoupanca(1000, "A", Convert.ToDateTime("21/01/2019"));
             Assert.Equal(valorEsperado, conta.calculaImposto());
         }
+
+        [Fact]
+        public void DeveRetornarOValorDoTributo()
+        {
+            var valorEsperado = 20;
+            var conta = new ContaPoupanca(1000, "", DateTime.Today);
+            Assert.Equal(valorEsperado, conta.calculaTributo());
+
+        }
     }
 }

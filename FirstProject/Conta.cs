@@ -3,10 +3,10 @@ using System;
 namespace FirstProject
 
 {
-    public class Conta : IImposto
+    public abstract class Conta : IImposto
     {
         
-        public double Saldo { get; private set; }
+        public double Saldo { get; protected set; }
         public string NomeProprietario { get; set; }
         public DateTime DataAbertura { get; set; }
         public int numero { get; set; }
@@ -16,24 +16,15 @@ namespace FirstProject
             this.NomeProprietario = nomeProprietario;
             this.DataAbertura = dataAbertura;
         }
-        public virtual void saque(double valor){
-            if(valor<=Saldo)
-            this.Saldo -= valor;
-            else
-            System.Console.WriteLine("Saldo insuficiente!");
-        }
+        public abstract void saque(double valor);
+            
+        
 
-        public virtual void deposito(double valor){
-            if(valor >0)
-            this.Saldo += valor;
-            else
-            System.Console.WriteLine("Valor para depósito inválido");
-        }
+        public abstract void deposito(double valor);
 
-        public virtual double calculaImposto(){
+        
 
-            return 0;
-        }
+        public abstract double calculaImposto();
 
 
         

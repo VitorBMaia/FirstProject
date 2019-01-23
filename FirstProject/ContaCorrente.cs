@@ -19,7 +19,7 @@ namespace FirstProject
         public override void deposito(double valor)
         {
             if(valor>0)
-            base.deposito(valor - 0.05);
+            this.Saldo += valor - 0.05;
             
             else
             System.Console.WriteLine("Deposito de valor invalido");
@@ -28,7 +28,7 @@ namespace FirstProject
         public override void saque(double valor)
         {
             if(valor<=this.Saldo)
-            base.saque(valor + valor*TAXA_SAQUE);
+            this.Saldo -= valor + valor*TAXA_SAQUE;
           else
           System.Console.WriteLine("Saldo insuficiente");
         }
