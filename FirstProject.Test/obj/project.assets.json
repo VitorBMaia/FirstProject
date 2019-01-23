@@ -5874,11 +5874,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Workspace\\FirstSolution\\FirstProject.Test\\FirstProject.Test.csproj",
+      "projectUniqueName": "D:\\Workspace\\FirstSolution\\git\\FirstProject.Test\\FirstProject.Test.csproj",
       "projectName": "FirstProject.Test",
-      "projectPath": "D:\\Workspace\\FirstSolution\\FirstProject.Test\\FirstProject.Test.csproj",
+      "projectPath": "D:\\Workspace\\FirstSolution\\git\\FirstProject.Test\\FirstProject.Test.csproj",
       "packagesPath": "C:\\Users\\Vitor\\.nuget\\packages\\",
-      "outputPath": "D:\\Workspace\\FirstSolution\\FirstProject.Test\\obj\\",
+      "outputPath": "D:\\Workspace\\FirstSolution\\git\\FirstProject.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5897,8 +5897,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Workspace\\FirstSolution\\FirstProject\\FirstProject.csproj": {
-              "projectPath": "D:\\Workspace\\FirstSolution\\FirstProject\\FirstProject.csproj"
+            "D:\\Workspace\\FirstSolution\\git\\FirstProject\\FirstProject.csproj": {
+              "projectPath": "D:\\Workspace\\FirstSolution\\git\\FirstProject\\FirstProject.csproj"
             }
           }
         }

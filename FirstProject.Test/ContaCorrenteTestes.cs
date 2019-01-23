@@ -9,7 +9,7 @@ namespace FirstProject.Test
         [Fact]
         public void DeveAcrescentarOSaldoDaConta()
         {
-        var valorEsperado = 1050;
+        var valorEsperado = 1049.95;
         var conta = new ContaCorrente(1000, "A", Convert.ToDateTime("21/01/2019"));
         conta.deposito(50);
         Assert.Equal(valorEsperado, conta.Saldo);

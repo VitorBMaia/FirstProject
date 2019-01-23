@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Workspace\\FirstSolution\\FirstProject\\FirstProject.csproj",
+      "projectUniqueName": "d:\\Workspace\\FirstSolution\\git\\FirstProject\\FirstProject.csproj",
       "projectName": "FirstProject",
-      "projectPath": "d:\\Workspace\\FirstSolution\\FirstProject\\FirstProject.csproj",
+      "projectPath": "d:\\Workspace\\FirstSolution\\git\\FirstProject\\FirstProject.csproj",
       "packagesPath": "C:\\Users\\Vitor\\.nuget\\packages\\",
-      "outputPath": "d:\\Workspace\\FirstSolution\\FirstProject\\obj\\",
+      "outputPath": "d:\\Workspace\\FirstSolution\\git\\FirstProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

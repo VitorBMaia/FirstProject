@@ -15,14 +15,14 @@ namespace FirstProject
 
         public override double calculaImposto()
         {
-            System.Console.WriteLine("O valor dos impostos por saque é de: " + TAXA_SAQUE*100 + "%.");
+            System.Console.WriteLine("O valor dos impostos por saque é de: " + TAXA_SAQUE* 100 + "%.");
             return TAXA_SAQUE;
         }
 
         public override void deposito(double valor)
         {
             if(valor > 0)
-            this.Saldo += valor;
+            base.deposito(valor);
             else
             System.Console.WriteLine("Deposito de valor invalido!");
         }
@@ -30,7 +30,8 @@ namespace FirstProject
         public override void saque(double valor)
         {
             if(valor <= this.Saldo)
-            this.Saldo -= valor;
+            base.saque(valor);
+            //this.Saldo -= valor;
             else
             System.Console.WriteLine("Saldo insuficiente!");
 

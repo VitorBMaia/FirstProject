@@ -20,3 +20,14 @@ d:\Workspace\FirstSolution\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.Ass
 d:\Workspace\FirstSolution\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.AssemblyInfo.cs
 d:\Workspace\FirstSolution\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.dll
 d:\Workspace\FirstSolution\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.pdb
+D:\Workspace\FirstSolution\git\FirstProject\bin\Debug\netcoreapp2.2\FirstProject.deps.json
+D:\Workspace\FirstSolution\git\FirstProject\bin\Debug\netcoreapp2.2\FirstProject.runtimeconfig.json
+D:\Workspace\FirstSolution\git\FirstProject\bin\Debug\netcoreapp2.2\FirstProject.runtimeconfig.dev.json
+D:\Workspace\FirstSolution\git\FirstProject\bin\Debug\netcoreapp2.2\FirstProject.dll
+D:\Workspace\FirstSolution\git\FirstProject\bin\Debug\netcoreapp2.2\FirstProject.pdb
+D:\Workspace\FirstSolution\git\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.csprojAssemblyReference.cache
+D:\Workspace\FirstSolution\git\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.csproj.CoreCompileInputs.cache
+D:\Workspace\FirstSolution\git\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.AssemblyInfoInputs.cache
+D:\Workspace\FirstSolution\git\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.AssemblyInfo.cs
+D:\Workspace\FirstSolution\git\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.dll
+D:\Workspace\FirstSolution\git\FirstProject\obj\Debug\netcoreapp2.2\FirstProject.pdb

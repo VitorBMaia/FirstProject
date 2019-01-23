@@ -4,7 +4,8 @@ namespace FirstProject
     public class ContaCorrente : Conta
     {
 
-        const double TAXA_SAQUE = 0.02;
+         const double TAXA_SAQUE = 0.02;
+        
         public ContaCorrente(double saldo, string nome, DateTime dataAbertura): base(saldo, nome, dataAbertura) {
 
         }
@@ -18,7 +19,8 @@ namespace FirstProject
         public override void deposito(double valor)
         {
             if(valor>0)
-            this.Saldo += valor;
+            base.deposito(valor - 0.05);
+            
             else
             System.Console.WriteLine("Deposito de valor invalido");
         }
@@ -26,7 +28,7 @@ namespace FirstProject
         public override void saque(double valor)
         {
             if(valor<=this.Saldo)
-          this.Saldo -= (valor + valor*TAXA_SAQUE);   
+            base.saque(valor + valor*TAXA_SAQUE);
           else
           System.Console.WriteLine("Saldo insuficiente");
         }
