@@ -1,6 +1,7 @@
 ﻿using System;
 using Xunit;
-using FirstProject;
+using FirstProject.TiposDeConta;
+using FirstProject.Excecoes;
 
 namespace FirstProject.Test
 {
@@ -26,22 +27,27 @@ namespace FirstProject.Test
         }
 
         [Fact]
-        public void DeveImpedirODeposito()
+        public void DeveImpedirODepositoValorNegativo()
         {
-            var saldoEsperado = 1000;
             var conta = new ContaPoupanca(1000, "A", Convert.ToDateTime("21/01/2019"));
-            conta.deposito(-50);
-            Assert.Equal(saldoEsperado, conta.Saldo);
+            Assert.Throws<ArgumentException>(()=> conta.deposito(-50));
 
         }
 
         [Fact]
-        public void DeveImpedirOSaque()
+        public void DeveImpedirOSaqueValorNegativo()
         {
-            var saldoEsperado = 1000;
+            var conta = new ContaPoupanca(1000, "", DateTime.Today);
+            Assert.Throws<ArgumentException>(()=> conta.saque(-50));
+
+        }
+
+        [Fact]
+        public void DeveImpedirOSaqueSaldoInsuficiente()
+        {
             var conta = new ContaPoupanca(1000, "A", Convert.ToDateTime("21/01/2019"));
-            conta.saque(1001);
-            Assert.Equal(saldoEsperado, conta.Saldo);
+            Assert.Throws<SaldoInsuficienteException>(()=> conta.saque(1001));
+         
         }
 
         [Fact]
@@ -55,7 +61,7 @@ namespace FirstProject.Test
         [Fact]
         public void DeveRetornarOValorDoTributo()
         {
-            var valorEsperado = 20;
+            var valorEsperado = 50;
             var conta = new ContaPoupanca(1000, "", DateTime.Today);
             Assert.Equal(valorEsperado, conta.calculaTributo());
 

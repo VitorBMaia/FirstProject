@@ -1,4 +1,4 @@
-namespace FirstProject
+namespace FirstProject.Intefaces
 {
     public interface ITributavel
     {

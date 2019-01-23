@@ -1,5 +1,8 @@
 using System;
-namespace FirstProject
+using FirstProject.Intefaces;
+using FirstProject.Excecoes;
+
+namespace FirstProject.TiposDeConta
 {
 
     
@@ -21,25 +24,37 @@ namespace FirstProject
 
         public double calculaTributo()
         {
-            return this.Saldo * 0.02;
+            return this.Saldo * 0.05;
         }
 
         public override void deposito(double valor)
         {
-            if(valor > 0)
-            this.Saldo += valor;
+            if(valor<=0)
+            {
+                System.Console.WriteLine("Valor inválido apra depósito!");
+                throw new ArgumentException();
+            }
             else
-            System.Console.WriteLine("Deposito de valor invalido!");
+            this.Saldo += valor;
         }
 
         public override void saque(double valor)
         {
-            if(valor <= this.Saldo)
+            if(valor <=0)
+            {
+                System.Console.WriteLine("Valor inválido para saque!");
+                throw new ArgumentException();
+            }
+            if(valor > this.Saldo)
+            {
+                System.Console.WriteLine("Saldo insuficiente!");
+                throw new SaldoInsuficienteException();
+            }
+            else
             this.Saldo -= valor;
             
-            else
-            System.Console.WriteLine("Saldo insuficiente!");
 
+            
         }
     }
 }

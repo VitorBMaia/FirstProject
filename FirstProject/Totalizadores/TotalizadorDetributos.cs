@@ -1,4 +1,5 @@
-namespace FirstProject
+using FirstProject.Intefaces;
+namespace FirstProject.Totalizadores
 {
     public class TotalizadorDetributos
     {

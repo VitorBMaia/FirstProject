@@ -1,13 +1,15 @@
 using System;
 using Xunit;
-namespace FirstProject.Test
+using FirstProject.TiposDeConta;
+using FirstProject.Totalizadores;
+namespace FirstProject
 {
     public class TotalizadorDeTributosTestes
     {
         [Fact]
         public void DeveSomarOsTributosDasContas()
         {
-            var valorEsperado = 50;
+            var valorEsperado = 80;
             var cp = new ContaPoupanca(1000, "", DateTime.Today);
             var cdi = new ContaDeInvestimento(1000, "", DateTime.Today);
             var totalizador = new TotalizadorDetributos();

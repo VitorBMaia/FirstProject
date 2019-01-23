@@ -1,4 +1,8 @@
-namespace FirstProject
+using FirstProject.Intefaces;
+using FirstProject.TiposDeConta;
+
+namespace FirstProject.Totalizadores
+
 {
     public class TotalizadorDeContas
     {
