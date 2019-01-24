@@ -60,5 +60,16 @@ namespace FirstProject.Test
 
         }
         
+        [Fact]
+        public void DeveCompararContas()
+        {
+            var conta1 = new ContaCorrente(1000, "A", Convert.ToDateTime("21/01/2019"));
+            var conta2 = new ContaCorrente(1000, "A", Convert.ToDateTime("21/01/2019"));
+            var conta3 = new ContaCorrente(1001, "B", Convert.ToDateTime("21/01/2019"));
+            Assert.True(conta1.Equals(conta2));
+            Assert.False(conta1.Equals(conta3));
+
+
+        }
     }
 }
