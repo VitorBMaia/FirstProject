@@ -10,7 +10,7 @@ namespace FirstProject.Test
         {
             var valorEsperado = typeof(string);
             GeraDevedores gerador = new GeraDevedores();
-            var valorAtual = gerador.Gerar();
+            var valorAtual = gerador.devedores;
             Assert.IsType(valorEsperado, valorAtual[0]);
 
 

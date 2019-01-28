@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using FirstProject.SimulacaoBanco;
 using FirstProject.TiposDeConta;
 namespace FirstProject
@@ -9,19 +10,26 @@ namespace FirstProject
     {
         static void Main(string[] args)
         {
-            var banco = new Conta[3];
-            
-            
-            banco[0] = new ContaCorrente(1000, "Maria", DateTime.Today);
-            banco[1] = new ContaCorrente(1000, "Maria", DateTime.Today);
-            banco[2] = new ContaDeInvestimento(1000, "Maria", DateTime.Today);
+            var geradorDevedores = new GeraDevedores();
+            var devedores = geradorDevedores.devedores;
+            var geradorContas = new GeraContas();
+            var contas = geradorContas.contas;
+    
            
+
+            var totalDeSaldo = from c in contas where c.Saldo > 500 select c.Saldo;
+             
             
+            foreach(double d in totalDeSaldo)
+            System.Console.WriteLine(d);
 
-            System.Console.WriteLine(banco[0].Equals(banco[1]));
-            System.Console.WriteLine(banco[0].GetHashCode() == banco[2].GetHashCode());
+            var titulares = from c in contas orderby c.NomeProprietario, c.Saldo select c;
+            titulares = titulares.OrderBy(c => c.NomeProprietario).ThenBy(c => c.Saldo);
+            
+            foreach(Conta c in titulares){
+                System.Console.WriteLine(c.NomeProprietario);
+            }
 
-            GeraContas gerador = new GeraContas();
 
             
         }

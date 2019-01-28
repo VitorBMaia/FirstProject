@@ -4,15 +4,17 @@ namespace FirstProject.SimulacaoBanco
 {
     public class GeraDevedores
     {
-        public List<string> Gerar()
+        public List<string> devedores { get; private set; }
+        public GeraDevedores()
         {
-            var lista = new List<string>();
+            
+            this.devedores = new List<string>();
 
             for (int i = 0; i < 30; i++)
             {
-                lista.Add("Devedor " + i);               
+                devedores.Add("Devedor " + i);               
             }
-            return lista;
+            
         }
     }
 }

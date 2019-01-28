@@ -7,7 +7,8 @@ namespace FirstProject.TiposDeConta
     public class ContaCorrente : Conta
     {
 
-         const double TAXA_SAQUE = 0.02;
+         private const double TAXA_SAQUE = 0.02;
+         private const double TRIBUTO = 0.05;
         
         public ContaCorrente(double saldo, string nome, DateTime dataAbertura): base(saldo, nome, dataAbertura) {
 
@@ -19,17 +20,22 @@ namespace FirstProject.TiposDeConta
             return TAXA_SAQUE;
         }
 
-        public override void deposito(double valor)
-        {
-            if(valor<=0)
+         public override void deposito(double valor) 
+         {
+
+
+             
+               
+
+           if(valor<=0)
             {
-                throw new ArgumentException();
-            } 
-            else
-            {
-                this.Saldo += valor - 0.05;
-            }
-        }
+                 throw new ArgumentException();
+             } 
+             else
+             {
+                 this.Saldo += valor - TRIBUTO;
+             }
+         }
 
         public override void saque(double valor)
         {
@@ -48,6 +54,8 @@ namespace FirstProject.TiposDeConta
                 this.Saldo -= valor + valor*TAXA_SAQUE;
             }
         }
+
+        
 
     }
 }
